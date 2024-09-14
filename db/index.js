@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
+import 'dotenv/config'
 
-const url='mongodb+srv://demo1:lUR0P7iGEN1FqTZU@demo.fthxj.mongodb.net/?retryWrites=true&w=majority&appName=Demo'
+const url=`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@demo.fthxj.mongodb.net/?retryWrites=true&w=majority&appName=Demo`
 mongoose.connect(url)
 export default mongoose
